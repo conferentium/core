@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/images', [\App\Http\Controllers\ImageController::class, 'index']);
+
+
+//Route::get('posts',[\App\Http\Controllers\PostController::class, 'index']);
+//Route::get('posts/{post}/edit', [\App\Http\Controllers\PostController::class, 'edit'])->name('posts.edit');
