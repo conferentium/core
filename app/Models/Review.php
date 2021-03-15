@@ -12,4 +12,6 @@ class Review extends Model
     {
         return $this->belongsTo(Submission::class);
     }
+
+
 }
