@@ -22,7 +22,8 @@ class SubmissionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->catchPhrase,
+            'abstract' => $this->faker->paragraph(),
         ];
     }
 }

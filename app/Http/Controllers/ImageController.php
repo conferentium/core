@@ -16,8 +16,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        return new ImageCollection(Image::first());
-       // return ImageResource::collection(Image::all());
+        // return new ImageCollection(Image::first());
+       return ImageResource::collection(Image::all());
     }
 
     /**

@@ -15,6 +15,9 @@ class CreateSubmissionsTable extends Migration
     {
         Schema::create('submissions', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->longText('abstract'); // Can we use the name 'abstract' for field?
+            $table->string('institute_name')->default('ABC College');
             $table->timestamps();
         });
     }

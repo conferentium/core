@@ -15,7 +15,10 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->boolean('is_selected');
+            $table->foreignId('submission_id')->constrained();
+            $table->integer('reviewer_id')->default(1);
+            $table->boolean('is_selected')->nullable();
+            $table->time('verified_at');
             $table->timestamps();
         });
     }

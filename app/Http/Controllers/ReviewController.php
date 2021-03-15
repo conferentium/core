@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ReviewCollection;
+use App\Http\Resources\ReviewResource;
 use App\Models\Review;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,9 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+        // return 'working'; // Trial
+        // return ImageResource::collection(Image::all());
+        return new ReviewCollection(Review::all());
     }
 
     /**

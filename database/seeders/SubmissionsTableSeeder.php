@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Submission;
 use Illuminate\Database\Seeder;
 
-class SubmissionTableSeeder extends Seeder
+class SubmissionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,6 @@ class SubmissionTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Submission::factory()->count(10)->create(); //Include Dependencies later
     }
 }

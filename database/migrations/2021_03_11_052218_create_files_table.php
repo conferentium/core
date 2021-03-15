@@ -15,6 +15,9 @@ class CreateFilesTable extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('submission_id')->constrained();
+            $table->enum('type', ['abstract', 'paper']);
+            $table->string('url');
             $table->timestamps();
         });
     }

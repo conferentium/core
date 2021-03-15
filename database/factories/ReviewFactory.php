@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Review;
+use App\Models\Submission;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ReviewFactory extends Factory
@@ -22,7 +23,9 @@ class ReviewFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'submission_id' => Submission::inRandomOrder()->first(),
+            //'reviewer_id'
+            'verified_at' => now(), //incomplete
         ];
     }
 }

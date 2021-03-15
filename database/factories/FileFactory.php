@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\File;
+use App\Models\Submission;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class FileFactory extends Factory
@@ -22,7 +23,9 @@ class FileFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'submission_id' => Submission::inRandomOrder()->first(),
+            'type' => $this->faker->randomElement(['abstract', 'paper']),
+            'url' => $this->faker->url,
         ];
     }
 }
