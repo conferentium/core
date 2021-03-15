@@ -12,9 +12,4 @@ class Review extends Model
     {
         return $this->belongsTo(Submission::class);
     }
-
-    /*public function reviewer()
-    {
-        return $this->belongsTo(Reviewer::class);
-    }*/
 }
